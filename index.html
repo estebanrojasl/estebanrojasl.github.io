@@ -73,6 +73,11 @@
   .now p { margin: 0; font-size: 13.5px; }
   .now strong { color: var(--accent); }
 
+  .about { margin-top: 26px; }
+  .about p { margin: 0 0 10px; max-width: 70ch; }
+  .about .big { font-size: 17px; font-weight: 500; line-height: 1.45; }
+  .job p { margin: 8px 0 0; color: #2c313a; }
+  .job p.meta { margin-top: 2px; color: var(--faint); }
   .job { padding: 18px 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
   .job:first-of-type { padding-top: 4px; }
   .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
@@ -122,7 +127,11 @@
     .job { padding: 11px 0; }
     .job h3 { font-size: 12pt; }
     .job .when, .job .meta, .stack { font-size: 8.5pt; }
-    .job .summary { margin: 5px 0 4px; }
+    .job p { margin-top: 5px; }
+    .job p.meta { margin-top: 1px; }
+    .about { margin-top: 14px; }
+    .about p { margin-bottom: 6px; font-size: 9.6pt; }
+    .about .big { font-size: 11.5pt; }
     .job li { margin: 2px 0; }
     .more { padding-top: 10px; }
     .skills { grid-template-columns: 110px 1fr; gap: 5px 14px; }
@@ -139,8 +148,7 @@
 <main class="page">
   <header>
     <h1>Esteban Rojas</h1>
-    <p class="role">Product Engineer · Full-stack · AI-native</p>
-    <p class="lede">I turn loose requirements and ambiguous problems into shipped production software, and I own the work end to end. Almost six years building products: two in-house at Snappr (YC), and four leading client projects at Oceans Code Experts.</p>
+    <p class="role">Product Engineer</p>
     <ul class="contact">
       <li>Medellín, Colombia (UTC-5) · Remote</li>
       <li><a href="mailto:esteban7590@hotmail.com">esteban7590@hotmail.com</a></li>
@@ -149,29 +157,11 @@
     </ul>
   </header>
 
-  <section>
-    <h2>How I own work</h2>
-    <div class="two">
-      <div class="point">
-        <h3>From the first call to production</h3>
-        <p>On client projects I run discovery calls, requirements, estimates, contracts, architecture, delivery and support.</p>
-      </div>
-      <div class="point">
-        <h3>I keep my word on scope</h3>
-        <p>I moved my client work from hourly billing to fixed price. When I misread a requirement and ran about 20 hours over, I absorbed it. Now scope is signed off feature by feature, with no overruns since.</p>
-      </div>
-      <div class="point">
-        <h3>Product input, not just code</h3>
-        <p>On the golf platform the client regularly asked for my product input. I propose features, check how they do with real usage, and say what I would change next.</p>
-      </div>
-      <div class="point">
-        <h3>Honest about fit</h3>
-        <p>When a client needed a Salesforce integration, I told them they needed a specialist instead of selling my own time.</p>
-      </div>
-    </div>
-    <div class="now">
-      <p><strong>What I'm focused on now.</strong> I use AI every day in how I build: Claude Code with my own skills, and agentic coding loops in sandboxed Docker. I wrote an 8-phase AI-assisted delivery playbook and taught it to coworkers. I build AI into products too, like lead and content generation engines with a human approving every output, and I'm exploring managed agents and evals. Next, I want a product role where I own the full loop past launch: measure usage, own a metric and improve it over time.</p>
-    </div>
+  <section class="about">
+    <p class="big">I take apps that were vibecoded into existence and turn them into production platforms that hold up. I build with structured AI workflows, and I answer for everything that comes out of them.</p>
+    <p>On client work I run the whole thing myself: the discovery calls, the estimate, the contract, the architecture, the release and the support after. I quote a fixed price. Once I misread a requirement in a discovery call and went about 20 hours over. I absorbed it and didn't renegotiate. Now every feature is written down and signed off before I build it.</p>
+    <p>Lately most of my work is helping businesses put AI into their daily operations, so the owners can spend their time on real decisions. It has to be reliable, so a person stays in the loop. On the side I'm building lead and content engines that do the research and the drafting, and leave the owner one click to send.</p>
+    <p>What I want next is the loop I had at Snappr: ship something, watch how people use it, own the number and keep making it better.</p>
   </section>
 
   <section>
@@ -183,13 +173,10 @@
         <span class="when">May 2024 to present</span>
       </div>
       <p class="meta">Canada · Client project via Oceans Code Experts</p>
-      <p class="summary">Rebuilt the operations platform for fully automated golf simulator facilities with no staff on site, replacing Shopify and Zapier. The software runs bookings, payments, lights and simulators.</p>
-      <ul>
-        <li>Owned it from requirements and estimate through contract, architecture and production. It started with two developers and ended with just me.</li>
-        <li>Chose a TypeScript monolith on front and back end to stay simple and fast for a small team.</li>
-        <li>Proposed and built one-click session extensions: 10 minutes before a session ends, if the next slot is free, the customer gets a discount to extend. Usage showed that at peak the next slot is usually booked, which points to off-peak pricing as the next step.</li>
-        <li>Live in production. The client now licenses the platform to other facility owners, and I wrote the technical brief for the multi-tenant version (tenant isolation, Stripe Connect).</li>
-      </ul>
+      <p>Golf simulator facilities with no staff on site. The software books the bay, takes the payment, and runs the lights and the simulators. It replaced a mix of Shopify and Zapier.</p>
+      <p>The scary part was the hardware. I was in Medellín and the simulators were in Canada, so I couldn't walk over and try things. I dealt with that first, with tests, retries and fallbacks around every hardware call. Once that was solid it was a normal software project, and the biggest risk was gone before most features existed.</p>
+      <p>I owned it from the estimate and contract to production. We started as two developers and I finished it alone, on a plain TypeScript monolith so one person could move fast. I also pitched features. One was a one-click extension: 10 minutes before your session ends, if the next slot is free, you get a discount to stay. At peak hours the next slot is almost always booked, so the offer can't fire, and people were asking to extend anyway. That told me the real lever was off-peak pricing.</p>
+      <p>It's live, and the client now licenses it to other facility owners. I wrote the technical brief for the multi-tenant version.</p>
     </article>
 
     <article class="job">
@@ -198,29 +185,17 @@
         <span class="when">Jun 2026 to Sep 2026</span>
       </div>
       <p class="meta">United States · Client project via Oceans Code Experts</p>
-      <p class="summary">Rebuilt the internal portal for about 9,000 employees and 400+ business applications, replacing a WordPress site.</p>
-      <ul>
-        <li>Owned technical scoping, the estimate and the SOW directly with client IT.</li>
-        <li>Estimated at about 240 hours with the agency's normal process, delivered in about 70 with AI in my workflow. Two weeks from approval to a UAT environment.</li>
-        <li>Replaced a planned client-built access API with Microsoft Graph, removing a dependency, and built a fallback for users in 200+ groups whose membership overflowed the token.</li>
-        <li>Rolled out in four stages: stubbed local, UAT via infrastructure as code, data migration, production cutover.</li>
-      </ul>
-      <p class="stack"><b>Stack:</b> ASP.NET Core, React, Azure SQL, Azure App Service, Entra ID SSO</p>
+      <p>Rebuilt the internal portal for about 9,000 employees on ASP.NET Core, React and Azure with Entra ID sign-in, replacing an old WordPress site. The usual agency estimate was about 240 hours. With my AI workflow it took about 70, and the client had a test environment two weeks after approval. This project is why I moved to fixed pricing.</p>
     </article>
 
     <article class="job">
       <div class="job-head">
         <h3>Beach Management Nosara <span class="title">· Lead Product Engineer</span></h3>
-        <span class="when">Jul 2024 to Apr 2026</span>
+        <span class="when">Jul 2024 to present</span>
       </div>
       <p class="meta">Costa Rica · Client project via Oceans Code Experts</p>
-      <p class="summary">Led product and engineering for a luxury property rental management platform, built from scratch.</p>
-      <ul>
-        <li>Ran estimation and prioritization with the business, and owned the delivery roadmap.</li>
-        <li>Integrated third-party rental management APIs.</li>
-        <li>Turned Figma designs into production features, and owned maintenance and infrastructure.</li>
-        <li>Built reporting and operational tools for the client's team.</li>
-      </ul>
+      <p>Luxury vacation rentals. I built their platform from scratch and ran it: the roadmap, the integrations with their rental software, the infrastructure.</p>
+      <p>Then the client told me they needed more bookings. That isn't an engineering ticket, but I went into the data anyway. Many guests asked questions before booking, got a weak answer or no answer at all, and left. So I built a guest reply assistant to make sure those questions get a good answer. It recovered about 10% of the bookings we were losing that way.</p>
     </article>
 
     <article class="job">
@@ -229,24 +204,20 @@
         <span class="when">Aug 2021 to Mar 2023</span>
       </div>
       <p class="meta">San Francisco, remote · In-house</p>
-      <p class="summary">On-demand photography marketplace. I worked on the admin team (internal tools, editing pipeline), then the photographers team. Engineers here were closely involved in product and data-driven decisions.</p>
-      <ul>
-        <li>The company goal was to close five enterprise "whale" accounts. I volunteered to own an idea from a team brainstorm: a proxy that loads any prospect's website and swaps their images for versions from Snappr's editing pipeline, with an original/edited toggle. Built in about three weeks. Sales used it with dozens of prospects, including Vrbo, and it helped close one of the whale accounts.</li>
-        <li>Moved the photographer quality guide from a PDF into the photographer app, made it interactive, and built a mini CMS so the photographers team could edit it without engineering. Shoot rejections went down noticeably.</li>
-        <li>Worked daily with an ops team in the Philippines, about 12 hours apart, through written end-of-day updates and small daily releases.</li>
-      </ul>
+      <p>On-demand photography marketplace, and my one in-house job so far. Engineers there were part of the product and data decisions, and that is what I want back.</p>
+      <p>One year the company goal was to close five enterprise "whale" accounts. At an onsite the team brainstormed ways to help sales, and I said I'd own one of the ideas. I built a proxy that loads any prospect's website and swaps their photos for versions from our editing pipeline, with a toggle to flip between before and after. Sales could show a prospect their own site, already improved. It took me about three weeks. Sales used it with dozens of prospects, Vrbo among them, and it helped close one of the whales. The most useful thing I built there was a sales tool, not a product feature.</p>
     </article>
 
-    <p class="more"><b>And more.</b> Vaquenda (AgTech operations platform, AI-powered event registration, led two engineers), AtlasPro AI, OpenPath (hosted checkout in .NET and React), GOAT Legend, Easy Apply (AI hiring MVP), Fundación Ideas para la Paz, and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
+    <p class="more"><b>And more.</b> Vaquenda (AgTech operations, AI event registration, led two engineers), AtlasPro AI, OpenPath (hosted checkout in .NET and React), GOAT Legend, Easy Apply (AI hiring MVP), Fundación Ideas para la Paz, and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
   </section>
 
   <section>
     <h2>Skills</h2>
     <dl class="skills">
-      <dt>Product</dt><dd>Discovery, scoping and estimation, stakeholder communication, prioritization, technical sales</dd>
+      <dt>Product</dt><dd>Discovery, scoping and estimates, talking to clients and users, technical sales</dd>
       <dt>Engineering</dt><dd>TypeScript, React, Next.js, Node, C#/.NET, Laravel, Postgres, MySQL, Stripe, OCPP (EV chargers)</dd>
-      <dt>Cloud</dt><dd>Azure (App Service, Azure SQL, Entra ID SSO), AWS, Vercel, Railway, CI/CD</dd>
-      <dt>AI</dt><dd>Claude Code, agentic coding loops, LLM integrations in products, AI-assisted delivery</dd>
+      <dt>Cloud</dt><dd>Azure, AWS, Vercel, Railway, CI/CD</dd>
+      <dt>AI</dt><dd>Claude Code with my own skills, agentic coding loops in Docker, LLM features in products</dd>
       <dt>Languages</dt><dd>Spanish (native), English (C1, fluent)</dd>
     </dl>
   </section>
