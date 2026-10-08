@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esteban Rojas, Product Engineer</title>
+<meta name="description" content="Esteban Rojas. Product engineer in Medellín, Colombia. Turns ambiguous problems into shipped production software and owns it end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16181d;
+    --muted: #5b6270;
+    --faint: #8a909c;
+    --rule: #e3e5ea;
+    --accent: #1f5f8b;
+    --accent-soft: #eaf2f8;
+    --bg: #ffffff;
+    --page-bg: #f4f5f7;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--ink);
+    font: 400 14px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .toolbar {
+    max-width: 860px; margin: 24px auto 0; padding: 0 16px;
+    display: flex; justify-content: flex-end; gap: 8px;
+  }
+  .btn {
+    font: 500 13px Inter, sans-serif; color: var(--ink); background: var(--bg);
+    border: 1px solid var(--rule); border-radius: 6px; padding: 7px 12px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .page {
+    max-width: 860px; margin: 12px auto 48px; background: var(--bg);
+    padding: 56px 64px; border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  }
+
+  header h1 {
+    font: 600 40px/1.1 Newsreader, Georgia, serif; letter-spacing: -0.01em; margin: 0;
+  }
+  header .role { font-size: 16px; font-weight: 500; color: var(--accent); margin: 6px 0 0; }
+  header .lede { font-size: 15px; color: var(--ink); margin: 16px 0 0; max-width: 62ch; }
+  .contact {
+    display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 18px 0 0; padding: 0;
+    list-style: none; font-size: 13px; color: var(--muted);
+  }
+
+  section { margin-top: 36px; }
+  h2 {
+    font: 600 11.5px Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+  }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .point h3 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
+  .point p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+  .now {
+    background: var(--accent-soft); border-radius: 6px; padding: 18px 20px; margin-top: 18px;
+  }
+  .now p { margin: 0; font-size: 13.5px; }
+  .now strong { color: var(--accent); }
+
+  .job { padding: 18px 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .job:first-of-type { padding-top: 4px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .job h3 { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .job .title { font-weight: 500; color: var(--muted); }
+  .job .when { font-size: 12.5px; color: var(--faint); white-space: nowrap; }
+  .job .meta { font-size: 12.5px; color: var(--faint); margin: 2px 0 0; }
+  .job .summary { margin: 8px 0 6px; }
+  .job ul { margin: 0; padding-left: 18px; }
+  .job li { margin: 4px 0; color: #2c313a; }
+  .job li::marker { color: var(--faint); }
+  .stack { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+  .stack b { font-weight: 600; color: var(--ink); }
+
+  .more { padding-top: 16px; font-size: 13.5px; color: var(--muted); }
+  .more b { color: var(--ink); font-weight: 600; }
+
+  .skills { display: grid; grid-template-columns: 150px 1fr; gap: 8px 20px; font-size: 13.5px; margin: 0; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .toolbar { margin-top: 12px; }
+    .page { padding: 32px 16px; margin: 8px 0 24px; border-radius: 0; box-shadow: none; }
+    header h1 { font-size: 32px; }
+    .two { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 8px; }
+  }
+
+  @page { size: Letter; margin: 0.45in 0.55in; }
+  @media print {
+    body { background: #fff; font-size: 9.6pt; line-height: 1.42; }
+    .toolbar { display: none; }
+    .page { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; }
+    a { border: 0; }
+    header h1 { font-size: 26pt; }
+    header .role { font-size: 11.5pt; }
+    header .lede { font-size: 10.5pt; margin-top: 10px; }
+    .contact { font-size: 8.5pt; margin-top: 10px; gap: 2px 14px; }
+    section { margin-top: 18px; }
+    h2 { font-size: 8.5pt; margin-bottom: 9px; padding-bottom: 5px; }
+    .point h3 { font-size: 10pt; }
+    .point p, .now p, .more, .skills { font-size: 9.2pt; }
+    .two { gap: 9px 22px; }
+    .now { padding: 11px 14px; margin-top: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .job { padding: 11px 0; }
+    .job h3 { font-size: 11pt; }
+    .job .when, .job .meta, .stack { font-size: 8.5pt; }
+    .job .summary { margin: 5px 0 4px; }
+    .job li { margin: 2px 0; }
+    .more { padding-top: 10px; }
+    .skills { grid-template-columns: 110px 1fr; gap: 5px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="btn" href="cv.pdf" download>Download PDF</a>
+  <button class="btn" onclick="window.print()">Print</button>
+</div>
+
+<main class="page">
+  <header>
+    <h1>Esteban Rojas</h1>
+    <p class="role">Product Engineer · Full-stack · AI-native</p>
+    <p class="lede">I turn loose requirements and ambiguous problems into shipped production software, and I own the work end to end. Almost six years building products: two in-house at Snappr (YC), and four leading client projects at Oceans Code Experts.</p>
+    <ul class="contact">
+      <li>Medellín, Colombia (UTC-5) · Remote</li>
+      <li><a href="mailto:esteban7590@hotmail.com">esteban7590@hotmail.com</a></li>
+      <li><a href="tel:+573012513127">+57 301 2513127</a></li>
+      <li><a href="https://www.linkedin.com/in/estebanrojasl/">linkedin.com/in/estebanrojasl</a></li>
+      <li><a href="https://github.com/estebanrojasl">github.com/estebanrojasl</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>How I own work</h2>
+    <div class="two">
+      <div class="point">
+        <h3>From the first call to production</h3>
+        <p>On client projects I run discovery calls, requirements, estimates, contracts, architecture, delivery and support. Often as the only engineer by the end.</p>
+      </div>
+      <div class="point">
+        <h3>I keep my word on scope</h3>
+        <p>I moved my client work from hourly billing to fixed price. When I misread a requirement and ran about 20 hours over, I absorbed it. Now scope is signed off feature by feature, with no overruns since.</p>
+      </div>
+      <div class="point">
+        <h3>Product input, not just code</h3>
+        <p>Clients ask for my product opinion. I propose features, check how they perform with real usage, and say what I would change next.</p>
+      </div>
+      <div class="point">
+        <h3>Honest about fit</h3>
+        <p>When a client needed a Salesforce integration, I told them they needed a specialist instead of selling my own time.</p>
+      </div>
+    </div>
+    <div class="now">
+      <p><strong>What I'm focused on now.</strong> I use AI every day in how I build: Claude Code with my own skills, and agentic coding loops in sandboxed Docker. I wrote an 8-phase AI-assisted delivery playbook and taught it to coworkers. I build AI into products too, like lead and content generation engines with a human approving every output, and I'm exploring managed agents and evals. Next, I want a product role where I own the full loop past launch: measure usage, own a metric and improve it over time.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Anytime Sim Golf <span class="title">· Lead Product Engineer</span></h3>
+        <span class="when">May 2024 to present</span>
+      </div>
+      <p class="meta">Canada · Client project via Oceans Code Experts</p>
+      <p class="summary">Rebuilt the operations platform for fully automated golf simulator facilities with no staff on site, replacing Shopify and Zapier. The software runs bookings, payments, lights and simulators.</p>
+      <ul>
+        <li>Owned it from requirements and estimate through contract, architecture and production. It started with two developers and ended with just me.</li>
+        <li>Chose a TypeScript monolith on front and back end to stay simple and fast for a small team.</li>
+        <li>Proposed and built one-click session extensions: 10 minutes before a session ends, if the next slot is free, the customer gets a discount to extend. Usage showed that at peak the next slot is usually booked, which points to off-peak pricing as the next step.</li>
+        <li>Live in production. The client now licenses the platform to other facility owners, and I wrote the technical brief for the multi-tenant version (tenant isolation, Stripe Connect).</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>The Salvation Army Southern California <span class="title">· AI-Native Product Engineer</span></h3>
+        <span class="when">Jun 2026 to Sep 2026</span>
+      </div>
+      <p class="meta">United States · Client project via Oceans Code Experts</p>
+      <p class="summary">Rebuilt the internal portal for about 9,000 employees and 400+ business applications, replacing a WordPress site.</p>
+      <ul>
+        <li>Owned technical scoping, the estimate and the SOW directly with client IT.</li>
+        <li>Estimated at about 240 hours with the agency's normal process, delivered in about 70 with AI in my workflow. Two weeks from approval to a UAT environment.</li>
+        <li>Replaced a planned client-built access API with Microsoft Graph, removing a dependency, and built a fallback for users in 200+ groups whose membership overflowed the token.</li>
+        <li>Rolled out in four stages: stubbed local, UAT via infrastructure as code, data migration, production cutover.</li>
+      </ul>
+      <p class="stack"><b>Stack:</b> ASP.NET Core, React, Azure SQL, Azure App Service, Entra ID SSO</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Beach Management Nosara <span class="title">· Lead Product Engineer</span></h3>
+        <span class="when">Jul 2024 to Apr 2026</span>
+      </div>
+      <p class="meta">Costa Rica · Client project via Oceans Code Experts</p>
+      <p class="summary">Led product and engineering for a luxury property rental management platform, built from scratch.</p>
+      <ul>
+        <li>Ran estimation and prioritization with the business, and owned the delivery roadmap.</li>
+        <li>Integrated third-party rental management APIs.</li>
+        <li>Turned Figma designs into production features, and owned maintenance and infrastructure.</li>
+        <li>Built reporting and operational tools for the client's team.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Snappr (YC) <span class="title">· Software Engineer</span></h3>
+        <span class="when">Aug 2021 to Mar 2023</span>
+      </div>
+      <p class="meta">San Francisco, remote · In-house</p>
+      <p class="summary">On-demand photography marketplace. I worked on the admin team (internal tools, editing pipeline), then the photographers team. Engineers here were closely involved in product and data-driven decisions.</p>
+      <ul>
+        <li>The company goal was to close five enterprise "whale" accounts. I volunteered to own an idea from a team brainstorm: a proxy that loads any prospect's website and swaps their images for versions from Snappr's editing pipeline, with an original/edited toggle. Built in about three weeks. Sales used it with dozens of prospects, including Vrbo, and it helped close one of the whale accounts.</li>
+        <li>Moved the photographer quality guide from a PDF into the photographer app, made it interactive, and built a mini CMS so the photographers team could edit it without engineering. Shoot rejections went down noticeably.</li>
+        <li>Worked daily with an ops team in the Philippines, about 12 hours apart, through written end-of-day updates and small daily releases.</li>
+      </ul>
+    </article>
+
+    <p class="more"><b>And more.</b> Vaquenda (AgTech operations platform, AI-powered event registration, led two engineers), AtlasPro AI, OpenPath (hosted checkout in .NET and React), GOAT Legend, Easy Apply (AI hiring MVP), Fundación Ideas para la Paz, and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Product</dt><dd>Discovery, scoping and estimation, stakeholder communication, prioritization, technical sales</dd>
+      <dt>Engineering</dt><dd>TypeScript, React, Next.js, Node, C#/.NET, Laravel, Postgres, MySQL, Stripe, OCPP (EV chargers)</dd>
+      <dt>Cloud</dt><dd>Azure (App Service, Azure SQL, Entra ID SSO), AWS, Vercel, Railway, CI/CD</dd>
+      <dt>AI</dt><dd>Claude Code, agentic coding loops, LLM integrations in products, AI-assisted delivery</dd>
+      <dt>Languages</dt><dd>Spanish (native), English (C1, fluent)</dd>
+    </dl>
+  </section>
+</main>
+
+</body>
+</html>
