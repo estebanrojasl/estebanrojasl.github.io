@@ -137,6 +137,9 @@
     .about p { margin-bottom: 6px; font-size: 9.6pt; }
     .about .big { font-size: 11.5pt; }
     .job li { margin: 2px 0; }
+    .job.long { break-inside: auto; }
+    .job.long li { break-inside: avoid; }
+    .job-head, .job .meta { break-after: avoid; }
     .more { padding-top: 10px; }
     .skills { grid-template-columns: 110px 1fr; gap: 5px 14px; }
   }
@@ -208,7 +211,7 @@
   <section>
     <h2>Experience</h2>
 
-    <article class="job">
+    <article class="job long">
       <div class="job-head">
         <h3>Oceans Code Experts <span class="title">· Product Engineer</span></h3>
         <span class="when">Mar 2023 to present</span>
@@ -218,9 +221,16 @@
         <li>Designed an AI-assisted development workflow and rolled it out to the engineering team as a shared practice; on the USSA portal rebuild, work scoped at ~238 hours was delivered in ~70.</li>
         <li>Took a human-in-the-loop inquiry reply agent for Beach Management Nosara from data review to signed contract to live agent.</li>
         <li>Built RAG over map and parcel data for Atlas Pro and rebuilt its owner-contact pipeline.</li>
+        <li>Led Vaquenda's AgTech operations platform, including AI-powered event registration flows, and mentored two engineers.</li>
+        <li>Built the MVP of Easy Apply, an AI job application platform, integrating external AI services and leading a small group of dev interns.</li>
         <li>Led the rebuild of the USSA portal for about 9,000 employees, replacing an old WordPress site, with a test environment ready two weeks after approval.</li>
         <li>Architected and led the Beach Management Nosara platform: roadmap, rental-software integrations and infrastructure.</li>
         <li>Led Anytime Sim Golf from estimate to production (May 2024 to present): booking, payments and hardware control for unstaffed golf simulator facilities in Canada. The client now licenses it to other facility owners.</li>
+        <li>Built audit and compliance backoffice features for the International Packaged Ice Association (Next.js, Azure).</li>
+        <li>Developed a hosted checkout in .NET and React for OpenPath, a payment processing company.</li>
+        <li>Owned the backend API and database for GOAT Legend, a sports venue booking marketplace.</li>
+        <li>Integrated payment gateways into Pure Advertising's internal reporting app and set up its CI/CD.</li>
+        <li>Added features to Musicasa Live, a platform for hiring musicians, and took part in product prioritization.</li>
       </ul>
     </article>
 
@@ -237,7 +247,7 @@
       </ul>
     </article>
 
-    <p class="more"><b>Other work.</b> Vaquenda (AgTech operations, led two engineers), OpenPath (hosted checkout in .NET and React), GOAT Legend, Easy Apply (hiring MVP), Fundación Ideas para la Paz, and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
+    <p class="more"><b>Other work.</b> Fundación Ideas para la Paz (knowledge platform for Venezuelan youth in Colombia) and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
   </section>
 
   <section>
