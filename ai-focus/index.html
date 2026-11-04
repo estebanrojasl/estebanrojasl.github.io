@@ -95,6 +95,8 @@
   .more { padding-top: 16px; font-size: 13.5px; color: var(--muted); }
   .more b { color: var(--ink); font-weight: 600; }
 
+  .client { margin-top: 12px; padding-left: 12px; border-left: 2px solid var(--rule); break-inside: avoid; }
+  .client h4 { font-size: 14px; font-weight: 600; margin: 0 0 2px; }
   .plain { margin: 0; color: #2c313a; }
   .plain + .plain { margin-top: 3px; }
   .plain b { font-weight: 600; }
@@ -122,13 +124,13 @@
     header .role { font-size: 11.5pt; }
     header .lede { font-size: 10.5pt; margin-top: 10px; }
     .contact { font-size: 8.5pt; margin-top: 10px; gap: 2px 14px; }
-    section { margin-top: 18px; }
+    section { margin-top: 13px; }
     h2 { font-size: 9.5pt; margin-bottom: 9px; padding-bottom: 5px; break-after: avoid; }
     .point h3 { font-size: 10pt; }
     .point p, .now p, .more, .skills { font-size: 9.2pt; }
     .two { gap: 9px 22px; }
     .now { padding: 11px 14px; margin-top: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .job { padding: 11px 0; }
+    .job { padding: 8px 0; }
     .job h3 { font-size: 12pt; }
     .job .when, .job .meta, .stack { font-size: 8.5pt; }
     .job p { margin-top: 5px; }
@@ -139,8 +141,12 @@
     .job li { margin: 2px 0; }
     .job.long { break-inside: auto; }
     .job.long li { break-inside: avoid; }
+    .client { margin-top: 5px; padding-left: 9px; }
+    .client h4 { font-size: 10pt; margin-bottom: 0; }
+    .job li { margin: 1px 0; }
+    .plain + .plain { margin-top: 1px; }
+    .more { padding-top: 7px; }
     .job-head, .job .meta { break-after: avoid; }
-    .more { padding-top: 10px; }
     .skills { grid-template-columns: 110px 1fr; gap: 5px 14px; }
   }
 </style>
@@ -218,20 +224,109 @@
       </div>
       <p class="meta">Remote · Client consulting</p>
       <ul>
-        <li>Designed an AI-assisted development workflow and rolled it out to the engineering team as a shared practice; on the USSA portal rebuild, work scoped at ~238 hours was delivered in ~70.</li>
-        <li>Took a human-in-the-loop inquiry reply agent for Beach Management Nosara from data review to signed contract to live agent.</li>
-        <li>Built RAG over map and parcel data for Atlas Pro and rebuilt its owner-contact pipeline.</li>
-        <li>Led Vaquenda's AgTech operations platform, including AI-powered event registration flows, and mentored two engineers.</li>
-        <li>Built the MVP of Easy Apply, an AI job application platform, integrating external AI services and leading a small group of dev interns.</li>
-        <li>Led the rebuild of the USSA portal for about 9,000 employees, replacing an old WordPress site, with a test environment ready two weeks after approval.</li>
-        <li>Architected and led the Beach Management Nosara platform: roadmap, rental-software integrations and infrastructure.</li>
-        <li>Led Anytime Sim Golf from estimate to production (May 2024 to present): booking, payments and hardware control for unstaffed golf simulator facilities in Canada. The client now licenses it to other facility owners.</li>
-        <li>Built audit and compliance backoffice features for the International Packaged Ice Association (Next.js, Azure).</li>
-        <li>Developed a hosted checkout in .NET and React for OpenPath, a payment processing company.</li>
-        <li>Owned the backend API and database for GOAT Legend, a sports venue booking marketplace.</li>
-        <li>Integrated payment gateways into Pure Advertising's internal reporting app and set up its CI/CD.</li>
-        <li>Added features to Musicasa Live, a platform for hiring musicians, and took part in product prioritization.</li>
+        <li>Designed an AI-assisted development workflow and rolled it out to the engineering team as a shared practice.</li>
       </ul>
+      <div class="client">
+        <div class="job-head">
+          <h4>The Salvation Army Southern California <span class="title">· AI-Native Product Engineer</span></h4>
+          <span class="when">Jun 2026 to Sep 2026</span>
+        </div>
+        <ul>
+          <li>Led the rebuild of the internal portal for about 9,000 employees, replacing an old WordPress site.</li>
+          <li>Scoped at ~238 hours, delivered in ~70, with a test environment ready two weeks after approval.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Beach Management Nosara <span class="title">· Lead Product Engineer</span></h4>
+          <span class="when">Jul 2024 to present</span>
+        </div>
+        <ul>
+          <li>Built and led the luxury rental management platform from scratch: roadmap, estimation, rental-software API integrations and infrastructure.</li>
+          <li>Delivered stakeholder reporting and operational tooling, and added the guest inquiry reply agent.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Atlas Pro <span class="title">· Product Engineer, AI Systems</span></h4>
+          <span class="when">Jul 2025 to Mar 2026</span>
+        </div>
+        <ul>
+          <li>Built RAG over map and parcel data and rebuilt the owner-contact pipeline.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Vaquenda <span class="title">· Lead Product Engineer</span></h4>
+          <span class="when">Sep 2025 to Mar 2026</span>
+        </div>
+        <ul>
+          <li>Led the AgTech operations platform, including AI-powered event registration flows, and mentored two engineers.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Easy Apply <span class="title">· Software Engineer</span></h4>
+          <span class="when">Aug 2023 to Mar 2024</span>
+        </div>
+        <ul>
+          <li>Built the MVP of an AI job application platform, integrating external AI services and leading a small group of dev interns.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Anytime Sim Golf <span class="title">· Lead Product Engineer</span></h4>
+          <span class="when">May 2024 to present</span>
+        </div>
+        <ul>
+          <li>Led the platform from estimate to production: booking, payments and hardware control for unstaffed golf simulator facilities in Canada. The client now licenses it to other facility owners.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>International Packaged Ice Association <span class="title">· Senior Software Engineer</span></h4>
+          <span class="when">Jan 2026 to Apr 2026</span>
+        </div>
+        <ul>
+          <li>Built audit and compliance backoffice features (Next.js, Azure).</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>GOAT Legend <span class="title">· Product Engineer, Backend Owner</span></h4>
+          <span class="when">Mar 2025 to Apr 2025</span>
+        </div>
+        <ul>
+          <li>Owned the backend API and database for a sports venue booking marketplace.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>OpenPath <span class="title">· Software Engineer</span></h4>
+          <span class="when">Nov 2024 to Mar 2025</span>
+        </div>
+        <ul>
+          <li>Developed a hosted checkout in .NET and React for a payment processing company.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Pure Advertising <span class="title">· Software Engineer</span></h4>
+          <span class="when">May 2024 to Jan 2025</span>
+        </div>
+        <ul>
+          <li>Integrated payment gateways into the internal reporting app and set up its CI/CD.</li>
+        </ul>
+      </div>
+      <div class="client">
+        <div class="job-head">
+          <h4>Musicasa Live <span class="title">· Software Engineer</span></h4>
+          <span class="when">Mar 2023 to Jul 2023</span>
+        </div>
+        <ul>
+          <li>Added features to a platform for hiring musicians and took part in product prioritization.</li>
+        </ul>
+      </div>
     </article>
 
     <article class="job">
