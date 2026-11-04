@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esteban Rojas, AI Solutions Consultant</title>
+<meta name="description" content="Esteban Rojas. AI solutions consultant in Medellín, Colombia. Defines where AI fits a business, proves it with a working pilot, and enables teams to deliver it at scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Saira:wght@400;500;600;700&family=Saira+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16181d;
+    --muted: #5b6270;
+    --faint: #8a909c;
+    --rule: #e3e5ea;
+    --accent: #1f5f8b;
+    --accent-soft: #eaf2f8;
+    --bg: #ffffff;
+    --page-bg: #f4f5f7;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--ink);
+    font: 400 14px/1.55 Saira, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .toolbar {
+    max-width: 860px; margin: 24px auto 0; padding: 0 16px;
+    display: flex; justify-content: flex-end; gap: 8px;
+  }
+  .btn {
+    font: 500 13px Saira, sans-serif; color: var(--ink); background: var(--bg);
+    border: 1px solid var(--rule); border-radius: 6px; padding: 7px 12px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .page {
+    max-width: 860px; margin: 12px auto 48px; background: var(--bg);
+    padding: 56px 64px; border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  }
+
+  header h1 {
+    font: 400 40px/1.1 "Russo One", sans-serif; letter-spacing: 0.01em; margin: 0;
+  }
+  header .role { font-size: 16px; font-weight: 500; color: var(--accent); margin: 6px 0 0; }
+  header .lede { font-size: 15px; color: var(--ink); margin: 16px 0 0; max-width: 62ch; }
+  .contact {
+    display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 18px 0 0; padding: 0;
+    list-style: none; font-size: 13px; color: var(--muted);
+  }
+
+  section { margin-top: 36px; }
+  h2 {
+    font: 700 13px "Saira Condensed", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+  }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .point h3 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
+  .point p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+  .now {
+    background: var(--accent-soft); border-radius: 6px; padding: 18px 20px; margin-top: 18px;
+  }
+  .now p { margin: 0; font-size: 13.5px; }
+  .now strong { color: var(--accent); }
+
+  .about { margin-top: 26px; }
+  .about p { margin: 0 0 10px; }
+  .about .big { font-size: 17px; font-weight: 500; line-height: 1.45; }
+  .job p { margin: 8px 0 0; color: #2c313a; }
+  .job p.meta { margin-top: 2px; color: var(--faint); }
+  .job { padding: 18px 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .job:first-of-type { padding-top: 4px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .job h3 { font: 700 17px/1.3 "Saira Condensed", sans-serif; letter-spacing: .01em; margin: 0; }
+  .job .title { font-weight: 500; color: var(--muted); }
+  .job .when { font-size: 12.5px; color: var(--faint); white-space: nowrap; }
+  .job .meta { font-size: 12.5px; color: var(--faint); margin: 2px 0 0; }
+  .job .summary { margin: 8px 0 6px; }
+  .job ul { margin: 0; padding-left: 18px; }
+  .job li { margin: 4px 0; color: #2c313a; }
+  .job li::marker { color: var(--faint); }
+  .stack { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+  .stack b { font-weight: 600; color: var(--ink); }
+
+  .more { padding-top: 16px; font-size: 13.5px; color: var(--muted); }
+  .more b { color: var(--ink); font-weight: 600; }
+
+  .plain { margin: 0; color: #2c313a; }
+  .plain + .plain { margin-top: 3px; }
+  .plain b { font-weight: 600; }
+
+  .skills { display: grid; grid-template-columns: 150px 1fr; gap: 8px 20px; font-size: 13.5px; margin: 0; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .toolbar { margin-top: 12px; }
+    .page { padding: 32px 16px; margin: 8px 0 24px; border-radius: 0; box-shadow: none; }
+    header h1 { font-size: 32px; }
+    .two { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 8px; }
+  }
+
+  @page { size: Letter; margin: 0.45in 0.55in; }
+  @media print {
+    body { background: #fff; font-size: 9.6pt; line-height: 1.42; }
+    .toolbar { display: none; }
+    .page { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; }
+    a { border: 0; }
+    header h1 { font-size: 26pt; }
+    header .role { font-size: 11.5pt; }
+    header .lede { font-size: 10.5pt; margin-top: 10px; }
+    .contact { font-size: 8.5pt; margin-top: 10px; gap: 2px 14px; }
+    section { margin-top: 18px; }
+    h2 { font-size: 9.5pt; margin-bottom: 9px; padding-bottom: 5px; break-after: avoid; }
+    .point h3 { font-size: 10pt; }
+    .point p, .now p, .more, .skills { font-size: 9.2pt; }
+    .two { gap: 9px 22px; }
+    .now { padding: 11px 14px; margin-top: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .job { padding: 11px 0; }
+    .job h3 { font-size: 12pt; }
+    .job .when, .job .meta, .stack { font-size: 8.5pt; }
+    .job p { margin-top: 5px; }
+    .job p.meta { margin-top: 1px; }
+    .about { margin-top: 14px; }
+    .about p { margin-bottom: 6px; font-size: 9.6pt; }
+    .about .big { font-size: 11.5pt; }
+    .job li { margin: 2px 0; }
+    .more { padding-top: 10px; }
+    .skills { grid-template-columns: 110px 1fr; gap: 5px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="btn" href="cv.pdf" download>Download PDF</a>
+  <button class="btn" onclick="window.print()">Print</button>
+</div>
+
+<main class="page">
+  <header>
+    <h1>Esteban Rojas</h1>
+    <p class="role">AI Solutions Consultant | From AI strategy to working pilots</p>
+    <ul class="contact">
+      <li>Medellín, Colombia (UTC-5) · Remote</li>
+      <li><a href="mailto:esteban7590@hotmail.com">esteban7590@hotmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/estebanrojasl/">linkedin.com/in/estebanrojasl</a></li>
+      <li><a href="https://github.com/estebanrojasl">github.com/estebanrojasl</a></li>
+    </ul>
+  </header>
+
+  <section class="about">
+    <p class="big">Software engineer since 2020 and technical consultant for almost four years, covering discovery, scoping, architecture and delivery. I define where AI fits a business, prove it with a working pilot, and enable teams to deliver it at scale.</p>
+    <p>Close to the edge, not chasing it. I filter what's new in AI down to what actually moves the needle for clients.</p>
+  </section>
+
+  <section>
+    <h2>Selected AI work</h2>
+
+    <article class="job">
+      <h3>AI-assisted delivery workflow, USSA (Salvation Army) portal rebuild</h3>
+      <ul>
+        <li>Designed an AI-assisted development workflow for the rebuild of a 9,000-user internal portal (ASP.NET Core, React, Azure, Entra ID).</li>
+        <li>Scoped at ~238 hours, delivered in ~70.</li>
+        <li>Rolled the workflow out to the Oceans Code Experts engineering team as a shared practice.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Inquiry reply agent, Beach Management Nosara (luxury rentals, Costa Rica)</h3>
+      <ul>
+        <li>Analyzed a year of guest conversations across Airbnb, VRBO and the direct site; found ~$350K in bookings lost to slow or weak replies.</li>
+        <li>Designed a human-in-the-loop agent that drafts fast, context-rich replies for staff to approve.</li>
+        <li>Took it from data review to signed contract to live agent.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Live call copilot (built for my own client work)</h3>
+      <ul>
+        <li>Personal tool I use on live client calls: suggests the next questions and topics to cover.</li>
+        <li>Tracks what's been discussed and flags gaps before the call ends.</li>
+        <li>Takes per-call context (who, goals, open topics) so suggestions fit each conversation.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Atlas Pro, commercial real estate intelligence</h3>
+      <ul>
+        <li>Built RAG over map and GeoJSON parcel data so users can query properties in plain language.</li>
+        <li>Rebuilt the owner-contact pipeline after testing showed generic B2B APIs found only 5–10% of owners; moved to public-record and property-specific sources, targeting 40–60% at ~$0.30 per lookup.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Oceans Code Experts <span class="title">· Product Engineer</span></h3>
+        <span class="when">Mar 2023 to present</span>
+      </div>
+      <p class="meta">Remote · Client consulting</p>
+      <ul>
+        <li>Designed an AI-assisted development workflow and rolled it out to the engineering team as a shared practice; on the USSA portal rebuild, work scoped at ~238 hours was delivered in ~70.</li>
+        <li>Took a human-in-the-loop inquiry reply agent for Beach Management Nosara from data review to signed contract to live agent.</li>
+        <li>Built RAG over map and parcel data for Atlas Pro and rebuilt its owner-contact pipeline.</li>
+        <li>Led the rebuild of the USSA portal for about 9,000 employees, replacing an old WordPress site, with a test environment ready two weeks after approval.</li>
+        <li>Architected and led the Beach Management Nosara platform: roadmap, rental-software integrations and infrastructure.</li>
+        <li>Led Anytime Sim Golf from estimate to production (May 2024 to present): booking, payments and hardware control for unstaffed golf simulator facilities in Canada. The client now licenses it to other facility owners.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Snappr (YC) <span class="title">· Software Engineer</span></h3>
+        <span class="when">Aug 2021 to Mar 2023</span>
+      </div>
+      <p class="meta">San Francisco, remote · In-house</p>
+      <ul>
+        <li>Worked on an on-demand photography marketplace, taking part in product and data decisions.</li>
+        <li>Built a sales tool in about three weeks: a proxy that loads a prospect's website and swaps in photos from our editing pipeline, with a before/after toggle.</li>
+        <li>Sales used it with dozens of prospects, Vrbo among them, and it helped close one of the company's five target enterprise accounts.</li>
+      </ul>
+    </article>
+
+    <p class="more"><b>Other work.</b> Vaquenda (AgTech operations, led two engineers), OpenPath (hosted checkout in .NET and React), GOAT Legend, Easy Apply (hiring MVP), Fundación Ideas para la Paz, and Vexi, an EV charging startup I co-founded. Full history on <a href="https://www.linkedin.com/in/estebanrojasl/">LinkedIn</a>.</p>
+  </section>
+
+  <section>
+    <h2>Skills / Stack</h2>
+    <dl class="skills">
+      <dt>AI</dt><dd>LLM APIs (Claude, OpenAI), RAG, agents and human-in-the-loop design, Claude Code, n8n</dd>
+      <dt>Engineering</dt><dd>TypeScript/Node.js, React, ASP.NET Core, Kotlin (learning)</dd>
+      <dt>Cloud</dt><dd>Azure (App Service, SQL, Entra ID), Railway, Docker</dd>
+      <dt>Languages</dt><dd>Spanish (native), English (C1, fluent)</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p class="plain"><b>University of East Anglia</b>, MSc Enterprise and Business Creation, 2017 to 2018</p>
+    <p class="plain"><b>Universidad EAFIT</b>, Engineer's degree in Mechatronics, Robotics and Automation, 2016 to 2017</p>
+    <p class="plain"><b>Universidad EAFIT</b>, Bachelor's in Product Design Engineering, 2011 to 2016</p>
+    <p class="plain"><b>Acámica</b>, Full Stack Web Development, 2020</p>
+    <p class="plain"><b>Y Combinator</b>, Startup School, 2023</p>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <p class="plain">World Solar Challenge 2015: EAFIT Team Primavera, PV concentration system, 9th place, best Latin American result then.</p>
+  </section>
+</main>
+
+</body>
+</html>
